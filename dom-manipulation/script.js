@@ -1,7 +1,16 @@
 let quotes = [
-  { text: "The only way to do great work is to love what you do.", category: "Motivation" },
-  { text: "Life is what happens when you're busy making other plans.", category: "Life" },
-  { text: "Believe you can and you're halfway there.", category: "Inspiration" }
+  {
+    text: "The only way to do great work is to love what you do.",
+    category: "Motivation",
+  },
+  {
+    text: "Life is what happens when you're busy making other plans.",
+    category: "Life",
+  },
+  {
+    text: "Believe you can and you're halfway there.",
+    category: "Inspiration",
+  },
 ];
 
 // Function to display a random quote
@@ -9,7 +18,7 @@ function showRandomQuote() {
   const randomIndex = Math.floor(Math.random() * quotes.length);
   const quote = quotes[randomIndex];
   const displayDiv = document.getElementById("quoteDisplay");
-  displayDiv.textContent = `"${quote.text}" — ${quote.category}`;
+  displayDiv.innerHTML = `"${quote.text}" — ${quote.category}`;
 }
 
 // Function to dynamically create the Add Quote Form
